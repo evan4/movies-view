@@ -33,10 +33,7 @@ function moviesview_admin_menu(){
 
 }
 
-
-function movies_view(){
-
-	?>
+function movies_view(){ ?>
 
 	<div class="wrap">
 		<h2>Настройка вывода списка фильмов</h2>
@@ -48,11 +45,10 @@ function movies_view(){
 
 add_action('admin_menu', 'moviesview_admin_menu');
 
-
 function moviesview_shortcode(){
 	// номер страницы пагинации
 	$paged = max( 1, get_query_var('page') );
-	// аргументы для запроса
+	
 
 	// списко постов
 	$postslist = new WP_Query(array(
@@ -63,7 +59,7 @@ function moviesview_shortcode(){
 		
 	// еонтент для вывода
 	$data = "";
-	//var_dump($postslist);
+	
 	if ( $postslist->have_posts() ){
 		while ( $postslist->have_posts() ) : $postslist->the_post(); 
 		
