@@ -71,8 +71,6 @@ function moviesview_shortcode(){
 				<div class="col-sm-6">
 					<h3>'.get_the_title().'</h3>
 					<div>'.mb_substr(get_the_content(), 0, 200).'...</div>
-					<p><span class="dashicons dashicons-cart"></span> Стоимость сеанса: '.get_field('стоимость_сеанса').' руб.</p>
-					<p><span class="dashicons dashicons-calendar"></span> Дата выхода в прокат: '.get_field('дата_выхода_в_прокат').'</p>
 					<p>
 						<a class="btn btn-primary" href="'.get_permalink().'" class="btn btn-lg btn-outline"">Перейти</a>
 					</p>
